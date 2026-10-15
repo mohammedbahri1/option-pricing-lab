@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "option-pricing-lab"
+version = "1.0.0"
+description = "Pricing d'options : Black-Scholes-Merton, Greeks, volatilité implicite, CRR et Monte Carlo"
+authors = [{ name = "Mohammed Bahri" }]
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.24", "scipy>=1.10"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "matplotlib>=3.7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
